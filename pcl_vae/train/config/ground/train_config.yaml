@@ -1,0 +1,53 @@
+device: cuda # cuda | cpu
+
+# --------------------------------------------------------------
+# Dataset
+#   - base_path: Path of all datasets
+#   - set_name: Name of the dataset (training_set | testing_set)
+# --------------------------------------------------------------
+base_dataset_path: datasets
+set_name: training_set
+
+# ------------------------------------
+# Training Parameters
+#   - num_epochs: Number of epochs
+#   - batch_size: Batch size
+#   - learning_rate: Rate of learning 
+# ------------------------------------
+num_epochs: 20
+batch_size: 16
+learning_rate: 0.0001
+
+# ------------------------------------
+# VAE
+#   - latent_space: Latent space size
+# ------------------------------------
+latent_space: 256
+
+# ------------------------------------
+# LiDAR Sensor (VLP-16)
+#   - h_fov: Horizontal Field of View (360 degrees | 2*pi rads)
+#   - v_fov: Vertical Field of View (30 degrees | pi/6 rads)
+# ------------------------------------
+h_fov: 6.283185307179586 
+v_fov: 0.5235987755982988
+
+# -------------------------------------------------------------------------
+# Range Image
+#   - image_height: Image height of the range image
+#   - image_width: Image width of the range image
+#   - image_max_range: Maximum distance allowed in the range image
+#   - image_min_range: Minimum distance allowed in the range image
+#   - invalid_pixel_value: Value of invalid pixels (3D points that are NaN)
+# -------------------------------------------------------------------------
+image_height: 16
+image_width: 1800
+image_min_range: 0.6
+image_max_range: 20.0
+invalid_pixel_value: -1.0
+
+# -------------------------------------------
+# Mapping
+# - voxel_size: Size of each voxel in meters
+#--------------------------------------------
+voxel_size: 0.2

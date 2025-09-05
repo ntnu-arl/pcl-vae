@@ -1,0 +1,48 @@
+device: cuda # cuda | cpu
+
+# -------------------------------------------------
+# Dataset
+#   - current_index: Index of the dataset to start
+# -------------------------------------------------
+base_dataset_path: datasets
+set_name: testing_set
+current_index: 0
+
+# -----------------------------------------------------
+# VAE
+#   - latent_space: Latent space size
+#   - calculate_loss: Calculate the loss
+#      -> TRUE: calculating the loss
+#      -> FALSE: displaying the range image comparison
+# -----------------------------------------------------
+latent_space: 256
+calculate_loss: False
+model_name: aerial_model_LD_256_epoch_20_batch_16_range_20_voxel_20.pth
+
+# ------------------------------------
+# LiDAR Sensor (Ouster OSO-64)
+#   - h_fov: Horizontal Field of View (360 degrees | 2*pi rads)
+#   - v_fov: Vertical Field of View (90 degrees | pi/2 rads)
+# ------------------------------------
+h_fov: 6.283185307179586 
+v_fov: 1.5707963267948966
+
+# -------------------------------------------------------------------------
+# Range Image
+#   - image_height: Image height of the range image
+#   - image_width: Image width of the range image
+#   - image_max_depth: Maximum distance allowed in the range image
+#   - image_min_depth: Minimum distance allowed in the range image
+#   - invalid_pixel_value: Value of invalid pixels (3D points that are NaN)
+# -------------------------------------------------------------------------
+image_height: 64
+image_width: 512
+image_max_depth: 20.0
+image_min_depth: 0.3
+invalid_pixel_value: -1.0
+
+# -------------------------------------------
+# Mapping
+# - voxel_size: Size of each voxel in meters
+#--------------------------------------------
+voxel_size: 0.2

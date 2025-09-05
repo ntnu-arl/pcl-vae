@@ -1,0 +1,2 @@
+Aerial Robot: aerial_model_LD_256_epoch_20_batch_16_range_20_voxel_20_ELU
+Ground Robot: ground_model_LD_256_epoch_20_batch_16_range_20_voxel_20_ELU
